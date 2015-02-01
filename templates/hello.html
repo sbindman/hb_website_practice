@@ -2,12 +2,20 @@
 <html>
 <head>
     <title>Hi There!</title>
+    <link rel="stylesheet" href="../static/madlibs.css">
 </head>
 <body>
-    <h1>Hi There!</h1>
+	<div class="topDiv"></div>
+	<br>
+	<div class="title centered">Dinner Planning Made Easy</div>
+	<br>
+    <div class="centered">Hi There! This website will help you pick an item for dinner. Ready?</div>
     <form action="/greet">
-        <label>What's your name? <input type="text" name="person"></label>
-        <input type="submit">
+        <div class = "centered" id="input_name">Please enter your name to begin: <input type="text" name="person"></div>
+
+        <br>
+
+        <div class="centered"><input type="submit" value = "Let's Go!"></div>
     </form>
 </body>
 </html>

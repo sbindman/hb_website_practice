@@ -20,13 +20,21 @@ def say_hello():
 def greet_person():
     player = request.args.get("person")
 
-    AWESOMENESS = [
-        'awesome', 'terrific', 'fantastic', 'neato', 'fantabulous', 'wowza', 'oh-so-not-meh',
-        'brilliant', 'ducky', 'coolio', 'incredible', 'wonderful', 'smashing', 'lovely']
+    return render_template("compliment.html", user=player)
 
-    compliment = choice(AWESOMENESS)
+@app.route('/food')
+def food():
+    vegetarian = request.args.get("vegetarian")
+    selected_food = None
+    FOOD = {"veggie" : ["pasta", "veggies and tofu", "eggplant parm", "cheese and crackers"] , "non-veggie" : ["pasta bolognese", "fish in paper", "chicken fried rice", "hamburgers"]}
 
-    return render_template("compliment.html", person=player, compliment=compliment)
+    if vegetarian == "yes":
+        selected_food = choice(FOOD["veggie"])
+    else:
+        selected_food = choice(FOOD["non-veggie"])
+
+
+    return render_template("food.html", food=selected_food)
 
 
 if __name__ == '__main__':

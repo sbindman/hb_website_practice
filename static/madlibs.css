@@ -1,0 +1,25 @@
+.centered {
+	text-align: center;
+}
+
+body {
+	background-color: #FCFFF5;
+	color: #3E606F;
+	font-family: sans-serif;
+}
+
+.title{
+	color:#193441;
+	margin: 10px;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+.block {
+	display: block;
+	text-align: right;
+}
+
+.answer {
+	background-color: #D1DBBD;
+}
